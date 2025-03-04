@@ -1,0 +1,3 @@
+mmcv/
+# Ignore training output directories
+work_dirs/

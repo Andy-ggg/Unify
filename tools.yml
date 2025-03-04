@@ -1,0 +1,72 @@
+# --------------
+# ##> CONDA
+# --------------
+##> WAY 1:
+# conda update -n base -c conda-forge conda
+# conda env create --file tools.yml
+# conda update -n ufd -c conda-forge conda
+# conda activate ufd
+# conda update --all
+#
+## Make sure you have the .toml dependencies created
+## If not: curl -sSL https://install.python-poetry.org | python3 -
+# poetry self update
+# poetry config installer.parallel true
+# poetry config experimental.new-installer false
+# poetry install --no-root -vvv
+# poetry update
+# poetry lock
+#
+## Check the if the torch packages installed fit your cuda (currently cu124)
+# python -c "import torch; print('torch:', torch.__version__)"  # Result: torch: x.x.x+cu124
+# python -c "import torchvision; print('torchvision:', torchvision.__version__)" # torchvision: x.x.x+cu124
+# python -c "import torchaudio; print('torchaudio:', torchaudio.__version__)" #Result torchaudio: x.x.x+cu124
+
+
+
+# -------------------------------------
+# ##> Reference: Conda + PyPi + Poetry
+# -------------------------------------
+# https://bit.ly/3N3k82T
+# https://bit.ly/42apttz
+
+name: ufd
+
+channels:
+    - pytorch
+    - conda-forge
+    # - defaults
+    # - esri # for arcgis
+    # - pyviz
+
+    # We want to have a reproducible setup, so we don't want default channels,
+    # which may be different for different users. All required channels should
+    # be listed explicitly here.
+    - nodefaults
+
+dependencies:
+    - python >=3.12, < 3.13 
+    - pip
+    - mamba
+    - conda-lock
+
+    # Maps
+    # - arcgis
+    - geoviews
+
+    # Similarity measures
+    - dtaidistance
+
+    # Plotting
+    - selenium
+    - firefox 
+    - geckodriver
+
+
+    - pip:
+        - poetry >=1.8.1
+        - shap >=0.44.1
+
+
+
+
