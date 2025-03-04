@@ -94,9 +94,6 @@ fiona = ">=1.9.5"
 rtree = ">=1.1.0"
 geonetworkx = ">=0.5.3"
 hvplot = ">=0.9.1"
-# torch = { version = ">=2.0.1", source="torch"}
-# torchaudio = { version = ">=2.0.2", source="torch"}
-# torchvision = { version = ">=0.15.2", source="torch"}
 torch = ">=2.5.0"
 torchvision = ">=0.20.0"
 torchaudio = ">=2.5.0"
@@ -115,11 +112,7 @@ dask = {extras = ["dataframe"], version = ">=2024.6.2"}
 # name = "torch"
 # url = "https://download.pytorch.org/whl/cu121"  # "https://download.pytorch.org/whl/cu117"  # Adjust for CUDA version if needed
 # priority = "explicit"
-flwr = "^1.14.0"
-ray = "^2.38.0"
-#flwr_datasets = { path = "./flwr_datasets" }
 datasets = "^3.1.0"
-huggingface-hub = "^0.26.2"
 ultralytics = "^8.3.58"
 matplotlib = "^3.10.0"
 opencv-python-headless = "^4.10.0.84"

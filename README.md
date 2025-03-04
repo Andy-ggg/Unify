@@ -15,7 +15,7 @@ To install all the requirements, one needs to first install:
 
 + conda
 + poetry
-+ flower
++ mmdet
 
 A detailed list of the required libraries can be found in:
 
